@@ -21,24 +21,13 @@
 
 #### Android
 
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNReactNativeImageClipboardPackage;` to the imports at the top of the file
-  - Add `new RNReactNativeImageClipboardPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-react-native-image-clipboard'
-  	project(':react-native-react-native-image-clipboard').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-react-native-image-clipboard/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-react-native-image-clipboard')
-  	```
+#### Currently not Supported !
 
 ## Usage
 ```javascript
-import RNReactNativeImageClipboard from 'react-native-react-native-image-clipboard';
+import RNImageClipboard from 'react-native-react-native-image-clipboard';
 
-// TODO: What to do with the module?
-RNReactNativeImageClipboard;
+const imageFromClipboard = await RNImageClipboard.getBase64Image();
+RNImageClipboard.addBase64Image(imageFromClipboard);
 ```
   
